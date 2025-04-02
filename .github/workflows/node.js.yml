@@ -27,5 +27,5 @@ jobs:
     #- run: cat commits.json
     #- run: sh pushPRDetails.sh $days
     #- run: cat prs.json
-    - run: sh pushAlerts.sh $days
+    - run: sh pushAlerts.sh 
     - run: cat alerts.json
