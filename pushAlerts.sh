@@ -69,6 +69,8 @@ gh api graphql -F owner='{owner}' -F name='{repo}'  -f query='
 		}
     }' > alerts.json
 
+    echo `cat alerts.json`
+
  hasNextPage=`jq -r '.data.repository.vulnerabilityAlerts.pageInfo.hasNextPage' alerts.json`
  echo $hasNextPage
  after=`jq -r '.data.repository.vulnerabilityAlerts.pageInfo.endCursor' alerts.json`
